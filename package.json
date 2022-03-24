@@ -1,6 +1,6 @@
 {
   "name": "@olympitech/openflixr-logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Logging system used in Openflixr packages",
   "main": "index.js",
   "scripts": {
