@@ -1,44 +1,44 @@
 const { isRequired, getTimeStamp } = require("./utility.js")  
 
-  function INFO (message) {
+  function INFO (message = isRequired('message to be displayed')) {
     log('INFO', message)
   }
   
-  function DEBUG (message) {
-    log('debug', message)
+  function DEBUG (message = isRequired('message to be displayed')) {
+    log('DEBUG', message)
   }
   
-  function FATAL (message) {
-    log('fatal', message)
+  function FATAL (message = isRequired('message to be displayed')) {
+    log('FATAL', message)
   }
   
-  function TRACE (message) {
-    log('trace', message)
+  function TRACE (message = isRequired('message to be displayed')) {
+    log('TRACE', message)
   }
   
-  function WARN (message) {
-    log('warn', message)
+  function WARN (message = isRequired('message to be displayed')) {
+    log('WARN', message)
   }
   
   // eslint-disable-next-line no-use-before-define
   function getLogLevel (levelCode = isRequired(levelCode)) {
     switch (levelCode) {
-      case 'trace':
-        return 'trace'
+      case 'TRACE':
+        return 'TRACE'
         break
-      case 'debug':
-        return 'debug'
+      case 'DEBUG':
+        return 'DEBUG'
         break
       case 'INFO':
         return 'INFO'
         break
-      case 'warn':
-        return 'warn'
+      case 'WARN':
+        return 'WARN'
         break
-      case 'error':
-        return 'error'
+      case 'ERROR':
+        return 'ERROR'
         break
-      case 'fatal':
+      case 'FATAL':
         return 'FATAL'
         break
       default:
@@ -47,22 +47,22 @@ const { isRequired, getTimeStamp } = require("./utility.js")
   // eslint-disable-next-line no-use-before-define
   function getColor (levelCode = isRequired(levelCode)) {
     switch (levelCode) {
-      case 'trace':
+      case 'TRACE':
         return '\x1b[36m'
         break
-      case 'debug':
+      case 'DEBUG':
         return '\x1b[33m'
         break
       case 'INFO':
         return '\x1b[32m'
         break
-      case 'warn':
+      case 'WARN':
         return '\x1b[31m'
         break
-      case 'error':
+      case 'ERROR':
         return '\x1b[31m'
         break
-      case 'fatal':
+      case 'FATAL':
         return '\x1b[31m'
         break
       default:
@@ -74,22 +74,22 @@ const { isRequired, getTimeStamp } = require("./utility.js")
     const logType = getLogLevel(level)
     let typeLine = ''
     switch (logType) {
-      case 'trace':
+      case 'TRACE':
         typeLine = `[TRACE ${timestamp}`
         break
-      case 'debug':
+      case 'DEBUG':
         typeLine = `[DEBUG ${timestamp}`
         break
       case 'INFO':
         typeLine = `[INFO ${timestamp}`
         break
-      case 'warn':
+      case 'WARN':
         typeLine = `[WARN ${timestamp}`
         break
-      case 'error':
+      case 'ERROR':
         typeLine = `[ERROR ${timestamp}`
         break
-      case 'fatal':
+      case 'FATAL':
         typeLine = `[FATAL ${timestamp}`
         break
       default:

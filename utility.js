@@ -22,3 +22,5 @@ function getTimeStamp(duration) {
 function isRequired(arg) {
     throw new Error(`${arg} is a required arguement`);
 }
+
+module.exports = { isRequired, getTimeStamp}

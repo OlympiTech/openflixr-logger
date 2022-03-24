@@ -1,7 +1,7 @@
 {
-  "name": "openflixr-logger",
+  "name": "@olympitech/openflixr-logger",
   "version": "1.0.0",
-  "description": "Logging system for Openflixr V3",
+  "description": "Logging system used in Openflixr packages",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/OlympiTech/openflixr-logger.git"
   },
   "author": "-Z3US-, OlympiTech",
-  "license": "GPL-3.0-or-later",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/OlympiTech/openflixr-logger/issues"
   },
